@@ -19,7 +19,7 @@ const NavigationBar = () => {
         className="h-[100px] w-[150px] absolute top-0 right-0"
       />
       <div className="flex justify-between items-center md:px-20 py-5 w-full">
-        <h1 className="text-3xl font-bold">Career Hub</h1>
+        <h1 className="text-4xl font-bold">Career Hub</h1>
 
         <div onClick={() => setMenuOpen(!menuOpen)} className="z-40 md:hidden text-3xl" >
           {
@@ -29,7 +29,7 @@ const NavigationBar = () => {
 
         <ul
           className={`md:flex gap-5 items-center text-lg font-medium absolute md:static p-5 ${
-            menuOpen ? "top-36 right-2  bg-slate-100" : "-top-36 right-0"
+            menuOpen ? "top-36 right-2 bg-slate-100" : "-top-36 right-0 bg-transparent"
           }`}
         >
           <NavigationLink to={"/"}>Home</NavigationLink>
