@@ -19,7 +19,7 @@ const NavigationBar = () => {
         className="h-[100px] w-[150px] absolute top-0 right-0"
       />
       <div className="flex justify-between items-center md:px-20 py-5 w-full">
-        <h1 className="text-4xl font-bold">Career Hub</h1>
+        <h1 className="text-4xl font-bold">Build Career</h1>
 
         <div onClick={() => setMenuOpen(!menuOpen)} className="z-40 md:hidden text-3xl" >
           {
