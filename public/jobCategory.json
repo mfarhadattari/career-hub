@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "categoryName": "Account & Finance",
+        "postNumber": 300,
+        "icon": "https://cdn-icons-png.flaticon.com/512/7892/7892621.png"
+    },
+    {
+        "id": 2,
+        "categoryName": "Creative Design",
+        "postNumber": 100,
+        "icon": "https://cdn-icons-png.flaticon.com/512/1601/1601913.png"
+    },
+    {
+        "id": 3,
+        "categoryName": "Technology",
+        "postNumber": 250,
+        "icon": "https://cdn-icons-png.flaticon.com/512/8474/8474182.png"
+    },
+    {
+        "id": 4,
+        "categoryName": "Marketing & Sales",
+        "postNumber": 200,
+        "icon": "https://cdn-icons-png.flaticon.com/512/1968/1968666.png"
+    }
+]

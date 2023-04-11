@@ -5,7 +5,7 @@ import bannar from '../../assets/bannar.png'
 const Header = () => {
   return (
     <header className="bg-gray-100 pt-28">
-      <div className="container mx-auto md:px-20 p-5 grid md:grid-cols-2 justify-between items-end gap-5">
+      <div className="container mx-auto md:px-20 px-5 grid md:grid-cols-2 justify-between items-end gap-5">
         <div className="mb-20 w-full">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-snug">
             <span className="block">One Step Closer To Your</span>
