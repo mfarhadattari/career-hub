@@ -3,18 +3,21 @@ import NavigationLink from "../NavigationLink/NavigationLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
+import vector1 from '../../assets/navVector-1.png' ;
+import vector2 from '../../assets/navVector-2.png' ;
+
 const NavigationBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="relative py-10 px-10 md:px-20 w-full bg-gray-100 ">
       <img
-        src="src/assets/Vector.png"
+        src={vector2}
         alt=""
         className="h-[100px] w-[150px] absolute bottom-0 left-0"
       />
       <img
-        src="src/assets/Vector-1.png"
+        src={vector1}
         alt=""
         className="h-[100px] w-[150px] absolute top-0 right-0"
       />
@@ -29,7 +32,7 @@ const NavigationBar = () => {
 
         <ul
           className={`md:flex gap-5 items-center text-lg font-medium absolute md:static p-5 ${
-            menuOpen ? "top-36 right-2 bg-slate-100" : "-top-36 right-0 bg-transparent"
+            menuOpen ? "top-36 right-2 bg-slate-100" : "hidden"
           }`}
         >
           <NavigationLink to={"/"}>Home</NavigationLink>
