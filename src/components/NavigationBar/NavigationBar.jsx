@@ -7,7 +7,7 @@ const NavigationBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="relative py-10 px-10 md:px-20 w-full ">
+    <nav className="relative py-10 px-10 md:px-20 w-full bg-gray-100 ">
       <img
         src="src/assets/Vector.png"
         alt=""
