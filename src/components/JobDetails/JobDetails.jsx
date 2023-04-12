@@ -9,6 +9,7 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { addToDb } from "../../utilities/fakedb";
 
 const JobDetails = () => {
   const [jobDetails, setJobDetails] = useState({});
@@ -21,9 +22,14 @@ const JobDetails = () => {
     }
    
   }, [data]);
+
+  const handelApply = (jobId) =>{
+    addToDb(jobId)
+  }
+
   return (
     <div className="container mx-auto mt-10 p-10">
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-3 gap-5">
         {/* job description section */}
         <div className="font-semibold text-lg col-span-2">
           <p>
@@ -68,21 +74,21 @@ const JobDetails = () => {
               <h1 className="text-black text-xl font-bold border-b border-slate-300 pb-5">
                 Job Details
               </h1>
-              <div className="text-gray-700 font-semibold mt-6 flex gap-3">
+              <div className="text-gray-700 font-semibold mt-6 flex items-center gap-3">
                 <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>{" "}
                 <p>
                   <span className="text-black">Phone:</span>{" "}
                   {jobDetails?.contact?.phone}
                 </p>
               </div>
-              <div className="text-gray-700 font-semibold mt-3 flex gap-3">
+              <div className="text-gray-700 font-semibold mt-3 flex items-center gap-3">
                 <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>{" "}
                 <p>
                   <span className="text-black">Email:</span>{" "}
                   {jobDetails?.contact?.email}
                 </p>
               </div>
-              <div className="text-gray-700 font-semibold mt-3 flex gap-3">
+              <div className="text-gray-700 font-semibold mt-3 flex items-center gap-3">
                 <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>
                 <p>
                   <span className="text-black">Address:</span>{" "}
@@ -91,7 +97,7 @@ const JobDetails = () => {
               </div>
             </div>
           </div>
-          <button className="bg-purple-500 text-white px-7 py-4 text-xl font-medium rounded-lg mt-8 w-full ">
+          <button onClick={() => handelApply(jobDetails.jobId)} className="bg-purple-500 text-white px-7 py-4 text-xl font-medium rounded-lg mt-8 w-full ">
             Apply Now
           </button>
         </div>
