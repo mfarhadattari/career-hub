@@ -7,9 +7,20 @@ const FeaturedJobs = () => {
   useEffect(() => {
     fetch("jobs-data.json")
       .then((res) => res.json())
-      .then((data) => setJobs(data));
+      .then((data) => {
+        const jobs4 = [];
+        for (let i = 0; i < 4; i++) {
+          jobs4.push(data[i]);
+          setJobs(jobs4);
+        }
+      });
   }, []);
 
+  const handelAllJob = () => {
+    fetch("jobs-data.json")
+      .then((res) => res.json())
+      .then((data) => setJobs(data));
+  };
 
   return (
     <section className="container mx-auto p-10">
@@ -26,9 +37,16 @@ const FeaturedJobs = () => {
         ))}
       </div>
       <div className="flex justify-center">
-      <button className="bg-purple-500 text-white px-10 py-4 text-xl font-medium rounded-lg mt-8">
-        See All Jobs
-      </button>
+        {jobs.length <= 4 ? (
+          <button
+            onClick={handelAllJob}
+            className="bg-purple-500 text-white px-10 py-4 text-xl font-medium rounded-lg mt-8"
+          >
+            See All Jobs
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </section>
   );
