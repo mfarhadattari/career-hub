@@ -4,10 +4,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const JobCard = ({ job }) => {
   const { jobId, title, company, location, salary, jobType, remote, logo } =
     job;
+    const navigate = useNavigate()
   return (
     <div className="border rounded-lg p-10">
       <img src={logo} alt="" className="w-40 h-20" />
@@ -32,7 +34,7 @@ const JobCard = ({ job }) => {
             <FontAwesomeIcon icon={faDollar}></FontAwesomeIcon> {salary}
           </p>
         </div>
-        <button className="bg-purple-500 text-white px-7 py-4 text-xl font-medium rounded-lg mt-5 ">
+        <button onClick={() => navigate(`/details-job/${jobId}`)} className="bg-purple-500 text-white px-7 py-4 text-xl font-medium rounded-lg mt-5 ">
           View Details
         </button>
       </div>
