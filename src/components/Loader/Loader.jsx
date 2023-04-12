@@ -1,8 +1,10 @@
 import React from "react";
+import { BallTriangle } from "react-loader-spinner";
 
 const Loader = () => {
   return (
-    <BallTriangle
+    <div className="flex justify-center m-10">
+      <BallTriangle
       height={100}
       width={100}
       radius={5}
@@ -12,6 +14,7 @@ const Loader = () => {
       wrapperStyle=""
       visible={true}
     />
+    </div>
   );
 };
 

@@ -4,7 +4,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const AppliedJob = ({ appliedJob }) => {
-  console.log(appliedJob);
   const { jobId, title, company, location, salary, jobType, remote, logo } =
     appliedJob;
   const navigate = useNavigate();
