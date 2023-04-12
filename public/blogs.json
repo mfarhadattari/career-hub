@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "When Used Context API?",
+        "answer": "Context API used to send data from parent components to child components Deeply. It used to managing state and Also used for Routing."
+    },
+    {
+        "id": 2,
+        "question": "What is Custom hooks?",
+        "answer": "Custom hooks is a JavaScript Function . Function name start with keyword 'use' . Hooks can used in deferent components with this functionality. "
+    },
+    {
+        "id": 3,
+        "question": "What is useRef() and Why its used?",
+        "answer": "useRef() is a react hooks . Its used to Manipulate DOM."
+    },
+    {
+        "id": 4,
+        "question": "What is useMemo() and Why its used?",
+        "answer": "useMemo() is a react hooks . Its used to Skipping expensive recalculations, Skipping re-rendering of components etc."
+    }
+]

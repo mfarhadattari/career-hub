@@ -16,14 +16,11 @@ const JobDetails = () => {
   const data = useLoaderData();
   useEffect(() => {
     if (data) {
-      console.log("get");
       const matchedJob = data.find((job) => job.jobId == jobId);
       setJobDetails(matchedJob);
-    } else {
-      console.log("not found");
     }
+   
   }, [data]);
-  console.log(jobDetails);
   return (
     <div className="container mx-auto mt-10 p-10">
       <div className="grid grid-cols-3 gap-5">

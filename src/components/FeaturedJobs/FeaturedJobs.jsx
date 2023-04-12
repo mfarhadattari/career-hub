@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import JobCard from "../JobCard/JobCard";
+import axios from "axios";
 
 const FeaturedJobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -8,6 +9,8 @@ const FeaturedJobs = () => {
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, []);
+
+
   return (
     <section className="container mx-auto p-10">
       <div>
